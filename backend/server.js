@@ -48,6 +48,7 @@ app.post("/login", (req, res, next) => {
 		}
 	})(req, res, next);
 });
+
 app.post("/register", (req, res) => {
 	User.findOne({ username: req.body.username }, async (err, doc) => {
 		if (err) throw err;
